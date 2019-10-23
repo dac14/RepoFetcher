@@ -13,7 +13,7 @@ final class MainRepositoriesListViewController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: MainRepositoriesListViewModelProtocol
-    
+
     init(viewModel: MainRepositoriesListViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)

@@ -1,0 +1,10 @@
+/* 
+  Localizables.strings
+  RepoFetcher
+
+  Created by Arkadiusz Buraczek on 23/10/2019.
+  Copyright © 2019 Arkadiusz Buraczek. All rights reserved.
+*/
+
+"general_alert_title" = "Warning";
+"general_alert_ok_button_message" = "Ok";

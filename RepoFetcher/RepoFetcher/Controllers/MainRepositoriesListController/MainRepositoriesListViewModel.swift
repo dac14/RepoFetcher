@@ -6,7 +6,7 @@
 //  Copyright © 2019 Arkadiusz Buraczek. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 protocol MainRepositoriesListViewModelProtocol: class {
     
@@ -14,12 +14,11 @@ protocol MainRepositoriesListViewModelProtocol: class {
 
 final class MainRepositoriesListViewModel: MainRepositoriesListViewModelProtocol {
     private let coordinator: MainRepositoryListCoordinatorProtocol!
-    private let service: MainRepositoryListService!
+    private let worker: MainRepositoriesListWorkerProtocol
+    private let disposeBag = DisposeBag()
     
-    init(coordinator: MainRepositoryListCoordinatorProtocol) {
+    init(coordinator: MainRepositoryListCoordinatorProtocol, worker: MainRepositoriesListWorkerProtocol = MainRepositoriesListWorker()) {
         self.coordinator = coordinator
-        
-        // TODO REFACTOR IT LATER 
-        self.service = MainRepositoryListService()
+        self.worker = worker
     }
 }
