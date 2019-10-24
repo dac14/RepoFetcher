@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1625062362309800C8FDAB /* MainRepositoriesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1625042362309800C8FDAB /* MainRepositoriesListCell.swift */; };
+		0B1625072362309800C8FDAB /* MainRepositoriesListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1625052362309800C8FDAB /* MainRepositoriesListCell.xib */; };
+		0B162509236230C800C8FDAB /* MainRepositoriesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B162508236230C800C8FDAB /* MainRepositoriesListCellViewModel.swift */; };
+		0B16250C23623CC300C8FDAB /* RepositoryRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16250B23623CC300C8FDAB /* RepositoryRenderable.swift */; };
 		0B63AA742360E2DC00505E29 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AA732360E2DC00505E29 /* ApiConstants.swift */; };
 		0B63AA762360E54400505E29 /* ErrorableTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AA752360E54400505E29 /* ErrorableTargetType.swift */; };
 		0B63AA7C2360E8DA00505E29 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AA7B2360E8DA00505E29 /* APIKeys.swift */; };
@@ -19,8 +23,6 @@
 		0B63AA942360F59900505E29 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AA932360F59900505E29 /* UIAlertControllerExtension.swift */; };
 		0B63AA982360F70F00505E29 /* RepositoriesListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AA972360F70F00505E29 /* RepositoriesListResponse.swift */; };
 		0B63AA9A2360F8A100505E29 /* SessionManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AA992360F8A100505E29 /* SessionManagerExtension.swift */; };
-		0B63AAA02360FE1F00505E29 /* PrimitiveSequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AA9F2360FE1E00505E29 /* PrimitiveSequenceExtension.swift */; };
-		0B63AAA22360FE5300505E29 /* JSONDecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63AAA12360FE5300505E29 /* JSONDecoderExtension.swift */; };
 		0BB72B6B235F954D0096AD49 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB72B6A235F954D0096AD49 /* Coordinator.swift */; };
 		0BB72B6D235F95750096AD49 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB72B6C235F95750096AD49 /* AppCoordinator.swift */; };
 		0BB72B6F235F97C20096AD49 /* MainRepositoryListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB72B6E235F97C20096AD49 /* MainRepositoryListCoordinator.swift */; };
@@ -50,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		014ACB0FD922991196F4523C /* Pods_RepoFetcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepoFetcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B1625042362309800C8FDAB /* MainRepositoriesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoriesListCell.swift; sourceTree = "<group>"; };
+		0B1625052362309800C8FDAB /* MainRepositoriesListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainRepositoriesListCell.xib; sourceTree = "<group>"; };
+		0B162508236230C800C8FDAB /* MainRepositoriesListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoriesListCellViewModel.swift; sourceTree = "<group>"; };
+		0B16250B23623CC300C8FDAB /* RepositoryRenderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRenderable.swift; sourceTree = "<group>"; };
 		0B63AA732360E2DC00505E29 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		0B63AA752360E54400505E29 /* ErrorableTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorableTargetType.swift; sourceTree = "<group>"; };
 		0B63AA7B2360E8DA00505E29 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
@@ -62,8 +68,6 @@
 		0B63AA932360F59900505E29 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		0B63AA972360F70F00505E29 /* RepositoriesListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListResponse.swift; sourceTree = "<group>"; };
 		0B63AA992360F8A100505E29 /* SessionManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerExtension.swift; sourceTree = "<group>"; };
-		0B63AA9F2360FE1E00505E29 /* PrimitiveSequenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveSequenceExtension.swift; sourceTree = "<group>"; };
-		0B63AAA12360FE5300505E29 /* JSONDecoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtension.swift; sourceTree = "<group>"; };
 		0BB72B6A235F954D0096AD49 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0BB72B6C235F95750096AD49 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0BB72B6E235F97C20096AD49 /* MainRepositoryListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepositoryListCoordinator.swift; sourceTree = "<group>"; };
@@ -108,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B16250A23623CB100C8FDAB /* Renderables */ = {
+			isa = PBXGroup;
+			children = (
+				0B16250B23623CC300C8FDAB /* RepositoryRenderable.swift */,
+			);
+			path = Renderables;
+			sourceTree = "<group>";
+		};
 		0B63AA722360E2C900505E29 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +144,6 @@
 				0B63AA882360F13800505E29 /* UIVIewExtension.swift */,
 				0B63AA932360F59900505E29 /* UIAlertControllerExtension.swift */,
 				0B63AA992360F8A100505E29 /* SessionManagerExtension.swift */,
-				0B63AA9F2360FE1E00505E29 /* PrimitiveSequenceExtension.swift */,
-				0B63AAA12360FE5300505E29 /* JSONDecoderExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,6 +215,7 @@
 		0BB72B71235F99060096AD49 /* MainRepositoriesListController */ = {
 			isa = PBXGroup;
 			children = (
+				0B16250A23623CB100C8FDAB /* Renderables */,
 				0B63AA7D2360EF5000505E29 /* Worker */,
 				0BB72B72235F993C0096AD49 /* Cell */,
 				0BB72B79235F9AAC0096AD49 /* MainRepositoriesListViewModel.swift */,
@@ -217,6 +228,9 @@
 		0BB72B72235F993C0096AD49 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				0B1625042362309800C8FDAB /* MainRepositoriesListCell.swift */,
+				0B1625052362309800C8FDAB /* MainRepositoriesListCell.xib */,
+				0B162508236230C800C8FDAB /* MainRepositoriesListCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -403,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1625072362309800C8FDAB /* MainRepositoriesListCell.xib in Resources */,
 				0BD44DB1235F8F4C0067B353 /* LaunchScreen.storyboard in Resources */,
 				0B63AA8D2360F38400505E29 /* Localizables.strings in Resources */,
 				0BB72B82235F9DAF0096AD49 /* MainRepositoriesListViewController.xib in Resources */,
@@ -499,6 +514,7 @@
 				0BB72B7A235F9AAC0096AD49 /* MainRepositoriesListViewModel.swift in Sources */,
 				0BD44DA7235F8F4B0067B353 /* SceneDelegate.swift in Sources */,
 				0B63AA892360F13800505E29 /* UIVIewExtension.swift in Sources */,
+				0B162509236230C800C8FDAB /* MainRepositoriesListCellViewModel.swift in Sources */,
 				0BB72B78235F99B70096AD49 /* BaseViewController.swift in Sources */,
 				0B63AA842360F05900505E29 /* ErrorHandlingPlugin.swift in Sources */,
 				0BB72B81235F9DAF0096AD49 /* MainRepositoriesListViewController.swift in Sources */,
@@ -506,10 +522,10 @@
 				0BB72B7E235F9C570096AD49 /* MainRepositoryListService.swift in Sources */,
 				0B63AA7F2360EF6400505E29 /* MainRepositoriesListWorker.swift in Sources */,
 				0BB72B6B235F954D0096AD49 /* Coordinator.swift in Sources */,
-				0B63AAA22360FE5300505E29 /* JSONDecoderExtension.swift in Sources */,
-				0B63AAA02360FE1F00505E29 /* PrimitiveSequenceExtension.swift in Sources */,
+				0B1625062362309800C8FDAB /* MainRepositoriesListCell.swift in Sources */,
 				0B63AA762360E54400505E29 /* ErrorableTargetType.swift in Sources */,
 				0B63AA922360F47000505E29 /* APIError.swift in Sources */,
+				0B16250C23623CC300C8FDAB /* RepositoryRenderable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

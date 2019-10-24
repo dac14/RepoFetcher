@@ -17,8 +17,9 @@ final class MainRepositoriesListWorker: MainRepositoriesListWorkerProtocol {
     private let provider: MoyaProvider<MainRepositoryListService> = .create()
     
     func fetchRepositoriesList(from date: String, page: String) -> Single<RepositoriesListResponse> {
-        return provider.rx.request(.repositoriesList(fromDate: date, page: page))
+        return provider.rx
+            .request(.repositoriesList(fromDate: date, page: page))
             .filterSuccessfulStatusCodes()
-            .snakeCaseDataDecode(RepositoriesListResponse.self)
+            .map(RepositoriesListResponse.self)
     }
 }
