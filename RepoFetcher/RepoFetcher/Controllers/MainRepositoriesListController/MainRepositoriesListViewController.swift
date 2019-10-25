@@ -10,6 +10,10 @@ import UIKit
 
 final class MainRepositoriesListViewController: BaseViewController {
     
+    private enum Constants {
+        static let estimatedRowHeight: CGFloat = 180
+    }
+    
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: MainRepositoriesListViewModelProtocol
@@ -38,6 +42,8 @@ final class MainRepositoriesListViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: String(describing: MainRepositoriesListCell.self), bundle: nil), forCellReuseIdentifier: MainRepositoriesListCell.identifier)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = Constants.estimatedRowHeight
     }
 }
 
@@ -46,7 +52,7 @@ extension MainRepositoriesListViewController: MainRepositoriesListViewModelDeleg
         guard values.count != viewModel.numberOfItemsInDataSource else { return tableView.reloadData() }
         
         let indexPaths = values.enumerated().map { index, _ in
-            IndexPath(item: viewModel.numberOfItemsInDataSource + index, section: .zero)
+            IndexPath(item: viewModel.dataSource.index(before: viewModel.dataSource.endIndex) - values.index(before: values.endIndex) + index, section: .zero)
         }
         
         guard !indexPaths.isEmpty else { return tableView.reloadData() }
@@ -55,12 +61,22 @@ extension MainRepositoriesListViewController: MainRepositoriesListViewModelDeleg
             tableView.insertRows(at: indexPaths, with: .bottom)
         }
     }
+    
+    func showIndicator(shouldShow: Bool) {
+        shouldShow ? showActivityIndicator() : hideActivityIndicator()
+    }
+    
+    func setTitle(with text: String) {
+        self.title = text
+    }
 }
 
 extension MainRepositoriesListViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 150.0
-//    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if viewModel.isNotLoadedCell(for: indexPath) {
+            viewModel.loadNextRepositories()
+        }
+    }
 }
 
 extension MainRepositoriesListViewController: UITableViewDataSource {

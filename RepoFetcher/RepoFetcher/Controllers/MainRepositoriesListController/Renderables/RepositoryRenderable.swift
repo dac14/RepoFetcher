@@ -9,10 +9,12 @@
 import Foundation
 
 struct RepositoryRenderable {
+    private let starFormatter = RepositoryRenderableStarFormatter()
+    
     let id: Int
     let name: String
     let description: String
-    let numberOfStars: Int
+    let numberOfStars: String
     let username: String
     let userAvatarUrl: String
     
@@ -22,6 +24,18 @@ struct RepositoryRenderable {
         description = item.description ?? ""
         username = item.owner?.login ?? ""
         userAvatarUrl = item.owner?.avatarUrl ?? ""
-        numberOfStars = item.stargazersCount ?? .zero
+        numberOfStars = starFormatter.formatStars(count: item.stargazersCount)
+    }
+}
+
+struct RepositoryRenderableStarFormatter {
+    // Format from e.g. 5507 to 5.5 k
+     func formatStars(count: Int?) -> String {
+        guard let count = count else { return "0 k" }
+        guard count > 99 else { return "\(count)" }
+        let thousands = Int(count / 1000)
+        let hundreds = Int((count - thousands * 1000) / 100)
+        
+        return "\(thousands).\(hundreds) k"
     }
 }

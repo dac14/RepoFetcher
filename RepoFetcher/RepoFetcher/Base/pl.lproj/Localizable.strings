@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RepoFetcher
+
+  Created by Arkadiusz Buraczek on 25/10/2019.
+  Copyright © 2019 Arkadiusz Buraczek. All rights reserved.
+*/
+
+"general_alert_title" = "Uwaga";
+"general_alert_ok_button_message" = "Ok";
+"repositories_list_title" = "Popularne repozytoria";
