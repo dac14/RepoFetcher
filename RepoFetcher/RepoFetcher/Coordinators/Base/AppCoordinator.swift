@@ -9,18 +9,19 @@
 import UIKit
 
 protocol AppCoordinatorProtocol: Coordinator {
-    init(window: UIWindow?)
+    init(window: UIWindow?, navigationController: UINavigationController)
 }
 
 final class AppCoordinator: AppCoordinatorProtocol {
-    private let navigationController = UINavigationController()
+    private let navigationController: UINavigationController
     
     private weak var window: UIWindow?
     
     private var mainRepositoryListCoordinator: MainRepositoryListCoordinator?
     
-    init(window: UIWindow?) {
+    init(window: UIWindow?, navigationController: UINavigationController = UINavigationController()) {
         self.window = window
+        self.navigationController = navigationController
         window?.rootViewController = navigationController
     }
     

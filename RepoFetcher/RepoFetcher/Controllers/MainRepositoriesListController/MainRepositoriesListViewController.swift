@@ -89,7 +89,7 @@ extension MainRepositoriesListViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MainRepositoriesListCell.identifier, for: indexPath) as! MainRepositoriesListCell
         cell.update(renderable: item)
-        #warning("throw fatal here? ")
+
         return cell
     }
     

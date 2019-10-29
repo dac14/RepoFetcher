@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
         }
     }
     
-    private let activityIndicator = UIActivityIndicatorView(style: .large)
+    let activityIndicator = UIActivityIndicatorView(style: .large)
     private let indicatorBackground = UIView()
     
     override func viewDidLoad() {
@@ -29,19 +29,15 @@ class BaseViewController: UIViewController {
     }
     
     func showActivityIndicator() {
-        DispatchQueue.main.async { [weak self] in
-            self?.activityIndicator.startAnimating()
-            self?.indicatorBackground.isHidden = false
-            self?.view.isUserInteractionEnabled = false
-        }
+        activityIndicator.startAnimating()
+        indicatorBackground.isHidden = false
+        view.isUserInteractionEnabled = false
     }
     
     func hideActivityIndicator() {
-        DispatchQueue.main.async { [weak self] in
-            self?.activityIndicator.stopAnimating()
-            self?.indicatorBackground.isHidden = true
-            self?.view.isUserInteractionEnabled = true
-        }
+        activityIndicator.stopAnimating()
+        indicatorBackground.isHidden = true
+        view.isUserInteractionEnabled = true
     }
     
     private func configureActivityIndicator() {

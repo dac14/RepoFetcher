@@ -14,7 +14,11 @@ protocol MainRepositoriesListWorkerProtocol {
 }
 
 final class MainRepositoriesListWorker: MainRepositoriesListWorkerProtocol {
-    private let provider: MoyaProvider<MainRepositoryListService> = .create()
+    private let provider: MoyaProvider<MainRepositoryListService>
+    
+    init(provider:  MoyaProvider<MainRepositoryListService> = .create()) {
+        self.provider = provider
+    }
     
     func fetchRepositoriesList(from date: String, page: String) -> Single<RepositoriesListResponse> {
         return provider.rx
